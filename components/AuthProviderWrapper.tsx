@@ -6,7 +6,7 @@ import { NeonAuthUIProvider } from "@neondatabase/neon-js/auth/react/ui";
 
 export function AuthProviderWrapper({ children }: { children: ReactNode }) {
   return (
-    <NeonAuthUIProvider authClient={authClient} emailOTP>
+    <NeonAuthUIProvider authClient={authClient as any} emailOTP>
       {children}
     </NeonAuthUIProvider>
   );
